@@ -1,0 +1,23 @@
+{
+  "name": "astro-resend",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.1.4",
+    "@astrojs/vercel": "^8.0.2",
+    "@react-email/components": "^0.0.32",
+    "@react-email/render": "1.0.4",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "astro": "^5.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.1.1"
+  }
+}

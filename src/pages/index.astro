@@ -1,0 +1,51 @@
+---
+import { isInputError } from "astro:actions";
+import { actions } from "astro:actions";
+
+const result = Astro.getActionResult(actions.send);
+if (result?.data) {
+  return Astro.redirect("/");
+}
+
+const inputErrors = isInputError(result?.error) ? result.error.fields : {};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Resend</title>
+  </head>
+  <body>
+    <h1>Send me an email</h1>
+    <form action={actions.send} method="post">
+      <label
+        >Username<input
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+          aria-describedby={inputErrors.username ? "username-error" : undefined}
+        />
+      </label>
+      {
+        inputErrors.username && (
+          <p id="username-error">{inputErrors.username[0]}</p>
+        )
+      }
+      <label
+        >Email<input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          aria-describedby={inputErrors.email ? "email-error" : undefined}
+        />
+      </label>
+      {inputErrors.email && <p id="email-error">{inputErrors.email[0]}</p>}
+      <button>Send</button>
+    </form>
+  </body>
+</html>
