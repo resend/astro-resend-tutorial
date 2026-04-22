@@ -1,0 +1,29 @@
+src/actions/index.ts
+  0be4475958d44179 4
+package.json
+  0be4475958d44179 19
+src/emails/sampleEmail.tsx
+  0be4475958d44179 12
+src/pages/api/send.ts
+  0be4475958d44179 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "8cfa7e04a42a36b96f884ed054f2015712b2061c",
+  "prompts": {
+    "0be4475958d44179": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e45906fa-a2d6-463a-8f05-62707e252535",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "João Melo",
+      "messages": [],
+      "total_additions": 8877,
+      "total_deletions": 6,
+      "accepted_lines": 8876,
+      "overriden_lines": 0
+    }
+  }
+}
