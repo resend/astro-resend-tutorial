@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
 import SampleEmail from "../../emails/sampleEmail";
-import { render } from "@react-email/render";
+import { render } from "react-email";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
