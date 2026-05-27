@@ -20,10 +20,8 @@ cp .env.example .env
 2. Install dependencies:
 
 ```sh
-npm install
-# or
-yarn
-  ```
+pnpm install
+```
 
 3. Add your name/domain in Resend calls
 
@@ -33,7 +31,7 @@ yarn
 4. Execute the following command:
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 ## License
